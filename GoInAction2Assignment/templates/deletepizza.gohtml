@@ -1,0 +1,40 @@
+{{template "header" .User}}
+
+{{if .User.FirstName}}
+<h2>Delete Pizza</h2>
+
+{{if eq .User.IsAdmin false}}
+    <p style="color:red;">You do not have access to this page. </p> 
+{{else}}
+     <p style="color:red;">{{.ClientMsg}} </p> 
+
+    {{if ne .CntPizza 0}}
+    <form method="post" autocomplete="off">
+        <table border="0">
+        <tr>
+            <td>Select Pizza to Delete</td>
+            <td>:</td>
+            <td>
+                <select id="pizzano" name="pizzano">
+                {{range .ViewPizzaSlice}}  
+                <option value="{{.PizzaNo}}">{{.PizzaName}}</option>                
+                {{end}}                     
+                </select>
+            </td>    
+        </tr>        
+
+        <tr><td colspan="3">&nbsp;</td></tr>
+
+        <tr><td colspan="3"><input type="submit"></td></tr>      
+        </table>   
+    </form>    
+    <br>
+    {{end}}
+{{end}}
+
+{{template "footer"}}
+
+{{end}}
+
+</body>
+</html>

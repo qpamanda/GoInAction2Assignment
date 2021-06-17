@@ -1,0 +1,28 @@
+{{define "login"}}
+
+<p>Please login to your account</p>
+
+<form method="post" autocomplete="off">
+    <table border="0">
+        <tr>
+            <td>Username</td>
+            <td>:</td>
+            <td><input type="text" name="username" placeholder="Username" required></td>    
+        </tr>
+        <tr>    
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" name="password" placeholder="Password" autocomplete="off" required></td>    
+        </tr>
+
+        <tr><td colspan="3">&nbsp;</td></tr>
+        
+        <tr>            
+            <td colspan="3">
+            <input type="submit">&nbsp;
+            <a href="/signup">Sign up</a> if you do not have an account.
+            </td>
+        </tr>    
+    </table>
+</form>
+{{end}}

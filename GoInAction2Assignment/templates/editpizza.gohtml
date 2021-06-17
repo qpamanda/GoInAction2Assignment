@@ -1,0 +1,50 @@
+{{template "header" .User}}
+
+{{if .User.FirstName}}
+<h2>Edit Pizza</h2>
+
+{{if eq .User.IsAdmin false}}
+    <p style="color:red;">You do not have access to this page. </p> 
+{{else}}
+     <p style="color:red;">{{.ClientMsg}} </p> 
+
+    {{if ne .CntPizza 0}}
+    <form method="post" autocomplete="off">
+        <table border="0">
+        <tr>
+            <td>Select Pizza to Edit</td>
+            <td>:</td>
+            <td>
+                <select id="pizzano" name="pizzano">
+                {{range .ViewPizzaSlice}}  
+                <option value="{{.PizzaNo}}" {{.Selected}}>{{.PizzaName}}</option>                
+                {{end}}                     
+                </select>
+            </td>    
+        </tr>
+        <tr>
+            <td>New Pizza Name</td>
+            <td>:</td>
+            <td><input type="text" name="pizzaname" placeholder="New Pizza Name" value="{{.PizzaName}}"></td>    
+        </tr>
+        <tr>
+            <td>New Pizza Price</td>
+            <td>:</td>
+            <td><input type="text" name="pizzaprice" placeholder="Pizza Price" value="{{.PizzaPrice}}"></td>    
+        </tr>   
+
+        <tr><td colspan="3">&nbsp;</td></tr>
+
+        <tr><td colspan="3"><input type="submit"></td></tr>      
+        </table>   
+    </form>    
+    <br>
+    {{end}}
+{{end}}
+
+{{template "footer"}}
+
+{{end}}
+
+</body>
+</html>

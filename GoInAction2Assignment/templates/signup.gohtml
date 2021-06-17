@@ -1,0 +1,58 @@
+{{template "header"}}
+
+<h2>Create a New Account</h2>
+
+<p style="color:red;">{{.ClientMsg}} </p> 
+
+<p>Enter the following to create a new account</p>
+
+<form method="post" autocomplete="off">
+    <table border="0">
+    <tr>
+        <td><label for ="username">Username</label></td>
+        <td>:</td>
+        <td><input type="text" name="username" placeholder="Username" value="{{.UserName}}"></td>
+    </tr>
+
+    <tr>
+        <td><label for ="password">Password</label></td>
+        <td>:</td>
+        <td><input type="password" name="password" placeholder="Password" value="{{.Password}}" autocomplete="off"></td>
+    </tr>
+
+    <tr>
+        <td><label for ="cmfpassword">Confirm Password</label></td>
+        <td>:</td>
+        <td><input type="password" name="cmfpassword" placeholder="Confirm Password" value="{{.CmfPassword}}" autocomplete="off"></td>
+    </tr>
+    
+    <tr>
+        <td><label for ="firstname">First Name</label></td>
+        <td>:</td>
+        <td><input type="text" name="firstname" placeholder="First Name" value="{{.FirstName}}"></td>
+    </tr>
+    
+    <tr>
+        <td><label for ="lastname">Last Name</label></td>
+        <td>:</td>
+        <td><input type="text" name="lastname" placeholder="Last Name" value="{{.LastName}}"></td>
+    </tr>
+
+    <tr>
+        <td><label for ="email">Email</label></td>
+        <td>:</td>
+        <td><input type="text" name="email" placeholder="Email" value="{{.Email}}"></td>
+    </tr>
+
+    <tr><td colspan="3">&nbsp;</td></tr>
+
+    <tr> 
+        <td colspan="3">
+            <input type="submit">&nbsp;
+            <a href="/">Login</a> if you already have an account.
+        </td>
+    </tr>     
+</form>
+
+</body>
+</html>

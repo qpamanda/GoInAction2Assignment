@@ -1,0 +1,40 @@
+{"level":"error","line":"server/indexHandler.go:37","msg":"username and/or password do not match","time":"2021-05-08T00:20:23+08:00"}
+{"level":"info","line":"server/indexHandler.go:47","msg":"[admin] user login successfully","time":"2021-05-08T00:21:05+08:00"}
+{"level":"info","line":"server/orderHandler.go:138","msg":"no orders made","time":"2021-05-08T00:21:30+08:00","userName":"admin"}
+{"level":"error","line":"server/orderHandler.go:90","msg":"invalid quantity","orderQty":0,"pizzaNo":1,"time":"2021-05-08T00:21:34+08:00","userName":"admin"}
+{"level":"error","line":"server/orderHandler.go:90","msg":"invalid quantity","orderQty":0,"pizzaNo":2,"time":"2021-05-08T00:21:34+08:00","userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:138","msg":"no orders made","time":"2021-05-08T00:21:34+08:00","userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:131","msg":"new order added successfully","orderItemSlice":[{"PizzaNo":1,"OrderQty":1},{"PizzaNo":2,"OrderQty":1}],"orderNo":1001,"time":"2021-05-08T00:21:38+08:00","totalCost":21.8,"userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:388","msg":"no completed orders","time":"2021-05-08T00:21:42+08:00","userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:446","msg":"order completed successfully and added to pizza sales","orderItemSlice":[{"PizzaNo":1,"OrderQty":1},{"PizzaNo":2,"OrderQty":1}],"orderNo":1001,"orderUserName":"admin","time":"2021-05-08T00:21:47+08:00","totalCost":21.8,"userName":"admin"}
+{"level":"warning","line":"server/userHandler.go:194","msg":"admin account cannot be deleted","time":"2021-05-08T00:21:56+08:00"}
+{"level":"error","line":"server/orderHandler.go:90","msg":"invalid quantity","orderQty":0,"pizzaNo":2,"time":"2021-05-08T00:23:50+08:00","userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:138","msg":"no orders made","time":"2021-05-08T00:23:50+08:00","userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:131","msg":"new order added successfully","orderItemSlice":[{"PizzaNo":2,"OrderQty":1}],"orderNo":1002,"time":"2021-05-08T00:23:53+08:00","totalCost":10.9,"userName":"admin"}
+{"level":"info","line":"server/userHandler.go:238","msg":"user logout successfully","time":"2021-05-08T00:24:26+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"username cannot be blank","time":"2021-05-08T00:24:29+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"password cannot be blank","time":"2021-05-08T00:24:35+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"password must be between 8 - 25 characters","time":"2021-05-08T00:24:40+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"password must have at least one numeric character","time":"2021-05-08T00:24:46+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"password must have at least one special character","time":"2021-05-08T00:24:49+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"password must have at least one special character","time":"2021-05-08T00:24:55+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"confirm password cannot be blank","time":"2021-05-08T00:24:57+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"password must have at least one upper case character","time":"2021-05-08T00:25:13+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"confirm password cannot be blank","time":"2021-05-08T00:25:19+08:00"}
+{"level":"error","line":"server/userHandler.go:44","msg":"confirm password must be the same as password","time":"2021-05-08T00:25:23+08:00"}
+{"level":"info","line":"server/userHandler.go:72","msg":"[amanda] user account created successfully","time":"2021-05-08T00:25:35+08:00"}
+{"level":"error","line":"server/userHandler.go:134","msg":"password cannot be blank","time":"2021-05-08T00:25:40+08:00"}
+{"level":"info","line":"server/userHandler.go:147","msg":"[amanda] user account updated successfully","time":"2021-05-08T00:26:08+08:00"}
+{"level":"info","line":"server/orderHandler.go:131","msg":"new order added successfully","orderItemSlice":[{"PizzaNo":3,"OrderQty":1},{"PizzaNo":4,"OrderQty":1}],"orderNo":1003,"time":"2021-05-08T00:26:18+08:00","totalCost":21.8,"userName":"amanda"}
+{"level":"error","line":"server/orderHandler.go:90","msg":"invalid quantity","orderQty":0,"pizzaNo":6,"time":"2021-05-08T00:26:28+08:00","userName":"amanda"}
+{"level":"info","line":"server/orderHandler.go:138","msg":"no orders made","time":"2021-05-08T00:26:28+08:00","userName":"amanda"}
+{"level":"info","line":"server/orderHandler.go:131","msg":"new order added successfully","orderItemSlice":[{"PizzaNo":5,"OrderQty":1},{"PizzaNo":6,"OrderQty":1}],"orderNo":1004,"time":"2021-05-08T00:26:31+08:00","totalCost":21.9,"userName":"amanda"}
+{"level":"info","line":"server/orderHandler.go:388","msg":"no completed orders","time":"2021-05-08T00:26:35+08:00","userName":"amanda"}
+{"level":"info","line":"server/userHandler.go:238","msg":"user logout successfully","time":"2021-05-08T00:26:38+08:00"}
+{"level":"info","line":"server/indexHandler.go:47","msg":"[admin] user login successfully","time":"2021-05-08T00:26:45+08:00"}
+{"level":"info","line":"server/orderHandler.go:446","msg":"order completed successfully and added to pizza sales","orderItemSlice":[{"PizzaNo":2,"OrderQty":1}],"orderNo":1002,"orderUserName":"admin","time":"2021-05-08T00:27:14+08:00","totalCost":10.9,"userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:330","msg":"no orders updated","orderNo":1004,"time":"2021-05-08T00:29:18+08:00","userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:131","msg":"new order added successfully","orderItemSlice":[{"PizzaNo":2,"OrderQty":1}],"orderNo":1005,"time":"2021-05-08T00:32:06+08:00","totalCost":10.9,"userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:446","msg":"order completed successfully and added to pizza sales","orderItemSlice":[{"PizzaNo":3,"OrderQty":1},{"PizzaNo":4,"OrderQty":1}],"orderNo":1003,"orderUserName":"amanda","time":"2021-05-08T00:32:13+08:00","totalCost":21.8,"userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:446","msg":"order completed successfully and added to pizza sales","orderItemSlice":[{"PizzaNo":5,"OrderQty":1},{"PizzaNo":6,"OrderQty":1}],"orderNo":1004,"orderUserName":"amanda","time":"2021-05-08T00:32:14+08:00","totalCost":21.9,"userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:446","msg":"order completed successfully and added to pizza sales","orderItemSlice":[{"PizzaNo":2,"OrderQty":1}],"orderNo":1005,"orderUserName":"admin","time":"2021-05-08T00:32:15+08:00","totalCost":10.9,"userName":"admin"}

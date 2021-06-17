@@ -1,0 +1,53 @@
+{{template "header" .User}}
+
+{{if .User.FirstName}}
+<h2>Complete Orders (Dequeue)</h2>
+
+{{if eq .User.IsAdmin false}}
+    <p style="color:red;">You do not have access to this page. </p> 
+{{else}}
+
+{{if eq .CntCurrentItems 0}}
+    <p style="color:red;">There are no orders to complete. </p>   
+{{else}}
+    <p style="color:red;">{{.ClientMsg}}</p>
+
+    <form method="post" autocomplete="off">      
+    <table id="view">
+    <tr>
+        <th>Order No</th>
+        <th>Order Items</th>
+        <th>Total Cost</th>
+        <th>&nbsp;</th>
+    </tr>
+        {{range .ViewOrderSlice}}  
+        <tr>
+            <td>
+                {{.OrderNo}}                    
+            </td>
+            <td>
+            {{range $item, $key := .ViewOrderItems}}
+                {{.OrderQty}} x {{.PizzaName}}                 
+                <br>
+            {{end}} 
+            </td>
+            <td>${{.TotalCost}}</td> 
+            <td>
+                {{if eq .IdxNo 1}}
+                <input type="submit" value="Complete Order">
+                {{end}}
+            </td>           
+        </tr>
+        {{end}}           
+    </table> 
+    </form>  
+    <br>
+{{end}}
+{{end}}
+
+{{template "footer"}}
+
+{{end}}
+
+</body>
+</html>

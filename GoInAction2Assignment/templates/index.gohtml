@@ -1,0 +1,23 @@
+
+{{template "header" .User}}
+
+{{if .User.FirstName}}
+{{template "mainmenu"}}
+
+{{if eq .User.IsAdmin true}}
+{{template "adminmenu"}}
+{{end}}
+
+</br>
+[<a href="/logout">Log Out</a>]
+
+{{else}}
+
+<p style="color:red;">{{.ClientMsg}} </p> 
+
+{{template "login"}}
+
+{{end}}
+
+</body>
+</html>

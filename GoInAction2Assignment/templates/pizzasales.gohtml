@@ -1,0 +1,66 @@
+{{template "header" .User}}
+
+{{if .User.FirstName}}
+<h2>View Pizza Sales of the Day</h2>
+
+{{if eq .User.IsAdmin false}}
+    <p style="color:red;">You do not have access to this page. </p> 
+{{else}}
+<h3>Current Order Sales</h3>
+{{if eq .CntCurrentItems 0}}
+    <p style="color:red;">There are no current orders. </p>   
+{{else}}        
+    <table id="view">
+    <tr>
+        <th>Pizza Name</th>
+        <th>Order Quantity</th>
+        <th>Total Cost</th>
+    </tr>
+    {{range .CurrentPizzaSales}}  
+        <tr>
+            <td>{{.PizzaName}}</td>
+            <td>{{.OrderQty}}</td>
+            <td>${{.STotalSales}}</td>           
+        </tr>
+    {{end}}  
+    <tr>
+        <td colspan="2"><b>TOTAL SALES OF CURRENT ORDERS :</b></td>
+        <td><b>${{.CurrentPizzaSalesTotal}}</b></td>
+    </tr>          
+    </table>   
+    <br>
+{{end}}
+
+
+<h3>Completed Order Sales</h3>
+{{if eq .CntCompletedItems 0}}
+    <p style="color:red;">There are no completed orders. </p>   
+{{else}}        
+    <table id="view">
+    <tr>
+        <th>Pizza Name</th>
+        <th>Order Quantity</th>
+        <th>Total Cost</th>
+    </tr>
+    {{range .CompletedPizzaSales}}  
+        <tr>
+            <td>{{.PizzaName}}</td>
+            <td>{{.OrderQty}}</td>
+            <td>${{.STotalSales}}</td>           
+        </tr>
+    {{end}}    
+    <tr>
+        <td colspan="2"><b>TOTAL SALES OF COMPLETED ORDERS :</b></td>
+        <td><b>${{.CompletedPizzaSalesTotal}}</b></td>
+    </tr>       
+    </table>     
+{{end}}
+
+{{end}}
+
+{{template "footer"}}
+
+{{end}}
+
+</body>
+</html>

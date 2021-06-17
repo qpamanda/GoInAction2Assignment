@@ -1,0 +1,50 @@
+{{template "header" .User}}
+
+{{if .User.FirstName}}
+<h2>Add Order</h2>
+
+{{if eq .CntCurrentItems 0}}
+    <p style="color:red;">Sorry. No pizza on the menu today.</p>   
+{{else}}
+
+    <p style="color:red;">{{.ClientMsg}}</p>
+
+    {{$max := .MaxOrder}}
+    <form method="post" autocomplete="off">
+        <table id="view">
+        <tr><th colspan="4">Pizza Menu</th></tr>
+        
+        <tr>
+            <td><b>Select Pizza</b></td>
+            <td align="center"><b>Price Per Pizza</b></td>
+            <td align="center"><b>Order Quantity</b></td>
+            <td><b>Remarks</b></td>
+        </tr>
+        {{range .OrderSlice}}  
+            <tr>
+                <td>
+                    <input type="checkbox" name="{{.PizzaNo}}" value="{{.PizzaNo}}" {{.Checked}}>&nbsp;
+                    {{.PizzaName}}                    
+                </td>
+                <td align="center">${{.PizzaPrice}}</td>
+                <td align="center"><input type="number" name="orderqty{{.ItemNo}}" min="0" max="{{$max}}" placeholder="Max {{$max}}" value="{{.OrderQty}}"></td> 
+                <td style="color:red;">{{.ErrorMsg}}</td>
+            </tr>
+        {{end}}       
+        </table>
+        <br>
+        <table>
+        <tr> 
+            <td align="left"><input type="submit"></td>                    
+        </tr> 
+        </table>
+    </form>
+    <br>
+{{end}}
+
+{{template "footer"}}
+
+{{end}}
+
+</body>
+</html>

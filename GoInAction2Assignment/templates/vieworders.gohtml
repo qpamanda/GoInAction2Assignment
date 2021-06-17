@@ -1,0 +1,68 @@
+{{template "header" .User}}
+
+{{if .User.FirstName}}
+<h2>View Orders</h2>
+
+<h3>Current Orders</h3>
+{{if eq .CntCurrentItems 0}}
+    <p style="color:red;">There are no current orders. </p>   
+{{else}}        
+    <table id="view">
+    <tr>
+        <th>Order No</th>
+        <th>Order Items</th>
+        <th>Total Cost</th>
+    </tr>
+        {{range .ViewOrderSlice}}  
+        <tr>
+            <td>
+                {{.OrderNo}}                    
+            </td>
+            <td>
+            {{range $item, $key := .ViewOrderItems}}
+                {{.OrderQty}} x {{.PizzaName}}                 
+                <br>
+            {{end}} 
+            </td>
+            <td>${{.TotalCost}}</td>           
+        </tr>
+        {{end}}           
+    </table>   
+    <br>
+{{end}}
+
+
+<h3>Completed Orders</h3>
+{{if eq .CntCompletedItems 0}}
+    <p style="color:red;">There are no completed orders. </p>   
+{{else}}        
+    <table id="view">
+    <tr>
+        <th>Order No</th>
+        <th>Order Items</th>
+        <th>Total Cost</th>
+    </tr>
+        {{range .CompletedOrderSlice}}  
+        <tr>
+            <td>
+                {{.OrderNo}}                    
+            </td>
+            <td>
+            {{range $item, $key := .ViewOrderItems}}
+                {{.OrderQty}} x {{.PizzaName}}                 
+                <br>
+            {{end}} 
+            </td>
+            <td>${{.TotalCost}}</td>           
+        </tr>
+        {{end}}           
+    </table>   
+    <br>
+{{end}}
+
+{{template "footer"}}
+
+{{end}}
+
+</body>
+</html>

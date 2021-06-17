@@ -1,0 +1,47 @@
+{{define "header"}}
+<!doctype html>
+<html lang="en">
+<head>    
+    <style>
+        body {
+            font-family: "Calibri", sans-serif;           
+        }
+
+        #view {
+        border-collapse: collapse;
+        width: 60%;
+        }
+
+        #view td, #view th {
+        border: 1px solid #ddd;
+        padding: 5px;
+        }
+
+        #view tr:nth-child(even){background-color: #f2f2f2;}
+
+        #view tr:hover {background-color: #ddd;}
+
+        #view th {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+        }
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Welcome to Awesome Pizza Online</title>
+</head>
+
+<body>
+<h1>Welcome to Awesome Pizza Online</h1>
+
+{{if .FirstName}}
+<i>User [{{.UserName}}] is currently logged in (Last Login: {{.LastLoginDT.Format "2006-01-02 15:04:05"}})</i>
+<br><br>
+(<a href="/edituser">Edit User Account</a>)
+<br>
+{{end}}
+
+{{end}}

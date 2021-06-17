@@ -1,0 +1,37 @@
+{{template "header" .User}}
+
+{{if .User.FirstName}}
+<h2>Add Pizza</h2>
+
+{{if eq .User.IsAdmin false}}
+    <p style="color:red;">You do not have access to this page. </p> 
+{{else}}
+     <p style="color:red;">{{.ClientMsg}} </p> 
+
+    <form method="post" autocomplete="off">
+        <table border="0">
+        <tr>
+            <td>Pizza Name</td>
+            <td>:</td>
+            <td><input type="text" name="pizzaname" placeholder="Pizza Name" value="{{.PizzaName}}"></td>    
+        </tr>
+        <tr>
+            <td>Pizza Price</td>
+            <td>:</td>
+            <td><input type="text" name="pizzaprice" placeholder="Pizza Price" value="{{.PizzaPrice}}"></td>    
+        </tr>   
+
+        <tr><td colspan="3">&nbsp;</td></tr>
+
+        <tr><td colspan="3"><input type="submit"></td></tr>      
+        </table>   
+    </form>    
+    <br>
+{{end}}
+
+{{template "footer"}}
+
+{{end}}
+
+</body>
+</html>

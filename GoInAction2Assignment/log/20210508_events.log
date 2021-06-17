@@ -1,0 +1,5 @@
+{"level":"info","line":"server/indexHandler.go:47","msg":"[admin] user login successfully","time":"2021-05-08T22:41:36+08:00"}
+{"level":"info","line":"server/pizzaHandler.go:56","msg":"pizza added successfully","pizzaName":"\u003ci\u003e”What’s up?\"\u003c/i\u003e","pizzaNo":6,"pizzaPrice":11,"time":"2021-05-08T22:41:52+08:00","userName":"admin"}
+{"level":"info","line":"server/pizzaHandler.go:56","msg":"pizza added successfully","pizzaName":"\u003cscript\u003ealert(1)\u003c/script\u003e","pizzaNo":7,"pizzaPrice":11,"time":"2021-05-08T22:56:17+08:00","userName":"admin"}
+{"level":"info","line":"server/orderHandler.go:365","msg":"no completed orders","time":"2021-05-09T00:29:23+08:00","userName":"admin"}
+{"level":"info","line":"server/userHandler.go:237","msg":"user logout successfully","time":"2021-05-09T00:29:59+08:00"}
